@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Jifs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jifs.each do |jif| %>
+      <tr>
+        <td><%= jif.name %></td>
+        <td><%= link_to 'Show', jif %></td>
+        <td><%= link_to 'Edit', edit_jif_path(jif) %></td>
+        <td><%= link_to 'Destroy', jif, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jif', new_jif_path %>
