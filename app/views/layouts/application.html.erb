@@ -8,8 +8,12 @@
   <meta http-equiv="refresh" content="60" />
 </head>
 <body>
+  <h1 id="addr"><h1>
   <div class="container">
     <%= yield %>
   </div>
 </body>
+<script>
+  document.getElementById('addr').textContent = document.location;
+</script>
 </html>
