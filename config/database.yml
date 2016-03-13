@@ -5,11 +5,11 @@ development:
   database: db/development.sqlite3
 
 production:
-  database: jif-mosaic
-  username: jif-mosaic
+  database: d31ilsro50nh5m
+  username: akdkllfsnqyvhn
   adapter: postgresql
   encoding: unicode
-  password: n0n0n0n0
+  password: cU02zHSiQv2CqQN1vJltqoVEXW
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
