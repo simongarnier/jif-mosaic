@@ -9,7 +9,9 @@
         </div>
       <% else %>
         <div class="col-md-2 nopadding">
-          <%= image_tag jif.image.url(:mosaic) %>
+          <a href="<%= "/jifs/#{jif.id}" %>">
+            <%= image_tag jif.image.url(:mosaic) %>
+          </a>
         </div>
       <% end%>
     <% end %>
