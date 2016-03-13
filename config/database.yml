@@ -5,7 +5,7 @@ development:
   database: db/development.sqlite3
 
 production:
-  url: ec2-54-235-153-179.compute-1.amazonaws.com
+  host: ec2-54-235-153-179.compute-1.amazonaws.com
   database: d31ilsro50nh5m
   username: akdkllfsnqyvhn
   adapter: postgresql
