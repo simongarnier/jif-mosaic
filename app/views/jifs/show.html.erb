@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @jif.name %>
+  <strong>Image:</strong>
+  <%= image_tag @jif.image.url(:mosaic) %>
 </p>
 
-<%= link_to 'Edit', edit_jif_path(@jif) %> |
 <%= link_to 'Back', jifs_path %>

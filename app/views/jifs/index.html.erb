@@ -1,27 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Jifs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @jifs.each do |jif| %>
-      <tr>
-        <td><%= jif.name %></td>
-        <td><%= link_to 'Show', jif %></td>
-        <td><%= link_to 'Edit', edit_jif_path(jif) %></td>
-        <td><%= link_to 'Destroy', jif, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<% (@jifs.shuffle + [nil]).each_slice(6) do |jifs_row|  %>
+  <div class="row">
+    <% jifs_row.each do |jif| %>
+      <% if !jif then%>
+        <div class="col-md-2 nopadding">
+          <a href="<%= new_jif_path %>">
+            <%= image_tag "https://placeholdit.imgix.net/~text?txtsize=33&txt=Add%20more!&w=200&h=200" %>
+          </a>
+        </div>
+      <% else %>
+        <div class="col-md-2 nopadding">
+          <%= image_tag jif.image.url(:mosaic) %>
+        </div>
+      <% end%>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Jif', new_jif_path %>
+  </div>
+<% end %>
